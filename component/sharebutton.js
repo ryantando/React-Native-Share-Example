@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import {
     View,
     Text,
@@ -11,7 +11,7 @@ import {
 import Share from 'react-native-share';
 
 const {width, height} = Dimensions.get('window')
-class ShareButtonComp extends React.Component {
+class ShareButtonComp extends PureComponent {
     onShare(){
         setTimeout(() => {
             Share.shareSingle(Object.assign(this.props.shareOptions, {

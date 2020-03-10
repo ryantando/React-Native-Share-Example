@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import {
     View,
     Text,
@@ -9,7 +9,7 @@ import {
     Linking
 } from "react-native";
 const {width, height} = Dimensions.get('window')
-class ShareButtonCompLinking extends Component {
+class ShareButtonCompLinking extends PureComponent {
     openUrl(){
         Linking.openURL(this.props.url).catch((err) => console.error('An error occurred', err))
         this.props.passProps()
